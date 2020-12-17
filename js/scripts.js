@@ -20,6 +20,7 @@
 		hidePreloader();
 	});
 
+    $("#cus-nav-bar").load("../components/navbar.html");
 	
 	/* Navbar Scripts */
 	// jQuery to collapse the navbar on scroll
