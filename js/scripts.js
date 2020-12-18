@@ -7,7 +7,7 @@
 
 (function($) {
     "use strict"; 
-	
+	$(".loading-spinner").load("../components/loading-spinner.html");
 	/* Preloader */
 	$(window).on('load', function() {
 		var preloaderFadeOutTime = 500;
@@ -19,10 +19,12 @@
 		}
 		hidePreloader();
 	});
-
-    $("#cus-nav-bar").load("../components/navbar.html");
 	
-	/* Navbar Scripts */
+    /* Navbar Scripts */
+    //Load navibar 
+    $(".cus-nav-bar").load("../components/navbar.html");
+    $(".cus-copyright").load("../components/copyright.html");
+
 	// jQuery to collapse the navbar on scroll
     $(window).on('scroll load', function() {
 		if ($(".navbar").offset().top > 20) {
@@ -358,6 +360,8 @@
 	/* Removes Long Focus On Buttons */
 	$(".button, a, button").mouseup(function() {
 		$(this).blur();
-	});
+    });
+    
+    
 
 })(jQuery);
